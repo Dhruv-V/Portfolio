@@ -1,0 +1,64 @@
+.landing-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    z-index: 9999;
+    flex-direction: column;
+  }
+  
+  @keyframes fadeOutUp {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    50%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-400px);
+    }
+  }
+
+  @keyframes textFadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-200);
+    }
+    50%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(-400px);
+    }
+  }
+  
+
+  .heading{
+    font-family: 'raleway';
+    font-weight: 500;
+    font-size : 3rem;
+    animation: textFadeIn 4s ease-in-out forwards;
+  }
+
+.fade-out {
+    animation: fadeOutUp 4s ease-in-out forwards;
+    pointer-events: none;
+  }
+
+.footer{
+    position: absolute;
+    bottom: 1rem;
+    font-size: .8rem;
+}
+  

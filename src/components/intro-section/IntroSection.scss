@@ -1,0 +1,40 @@
+.intro-projects {
+  position: fixed;
+  width: 100%;
+  top: 0;
+    display: flex;
+    height: calc(100vh - 60px); // Adjust for navbar height
+    padding-top: 60px;
+    background: linear-gradient(to right, #1e1e1e, #333);
+  
+    .intro {
+      width: 60%;
+      padding: 40px;
+      color: white;
+    }
+  
+    .projects {
+      width: 40%;
+      padding: 40px;
+      background-color: black;
+      color: white;
+      border-top-left-radius : 1rem;
+  
+      ul {
+        list-style: none;
+  
+        li {
+          margin: 10px 0;
+  
+          a {
+            color: #007bff;
+            text-decoration: none;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+  

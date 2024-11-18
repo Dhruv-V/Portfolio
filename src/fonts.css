@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "roboto";
+  src: url("./assets/fonts/roboto.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "raleway";
+  src: url("./assets/fonts//raleway.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+html,
+body,
+#root {
+  font-family: "raleway", sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
