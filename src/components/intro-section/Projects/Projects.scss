@@ -1,0 +1,92 @@
+.projects {
+  padding: 2rem;
+  padding-left: 2rem;
+  background: #1e1e1e; // Dark background
+  border-top-left-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .project-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  h2 {
+    color: #f5f5f5;
+    font-family: "Raleway", sans-serif;
+    font-size: 1rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    .project-tile {
+      margin: 20px 0;
+      padding: 20px;
+      border-bottom: 2px solid transparent;
+      border-radius: 10px;
+      background: linear-gradient(90deg, #2c2c2c, #3a3a3a);
+
+      transition: all 0.3s ease-in-out;
+      position: relative;
+      overflow: hidden;
+      &:hover {
+        border-color: #007bff;
+        background: linear-gradient(90deg, #3a3a3a, #2c2c2c);
+        transform: translateX(5px);
+
+        .arrow {
+          opacity: 1;
+          transform: translateX(5px);
+        }
+      }
+
+      .project-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #ffffff;
+        font-size: 1rem;
+        /* font-weight: bold; */
+        text-decoration: none;
+        position: relative;
+
+        &:hover {
+          color: #007bff;
+          text-decoration: none;
+        }
+
+        .arrow {
+          font-size: 1.5rem;
+          margin-left: 10px;
+          transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+          opacity: 0;
+          transform: translateX(-10px);
+        }
+      }
+
+      .project-description {
+        color: #cccccc;
+        font-size: 1rem;
+        margin-top: 10px;
+        font-family: "Raleway", sans-serif;
+      }
+    }
+    .project-tile::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      background: #000;
+      transition: width 0.5s ease-in-out;
+    }
+    .project-tile::after:hover {
+      width: 100%;
+    }
+  }
+}

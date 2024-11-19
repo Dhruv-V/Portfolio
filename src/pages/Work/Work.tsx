@@ -1,12 +1,18 @@
-import React from 'react';
-import './Work.scss';
+import { projects } from "../../utils/projects";
+import ProjectTile from "./project-tile/ProjectTile";
 
 const Work = () => {
   return (
-    <section id="work" className="section">
-      <h1>Work</h1>
-      <p>This is the Work section...</p>
-    </section>
+    <div className="work-page">
+      {projects.map((project, index) => (
+        <ProjectTile
+          key={project.id}
+          project={project}
+          index={index}
+          totalProjects={projects.length}
+        />
+      ))}
+    </div>
   );
 };
 
