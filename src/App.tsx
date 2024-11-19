@@ -18,7 +18,6 @@ const App = () => {
 
       {/* Scrollable Content */}
       <div className="scrollable-content">
-      {/* <Overlay/> */}
         <About />
         <Work />
         <Contact />

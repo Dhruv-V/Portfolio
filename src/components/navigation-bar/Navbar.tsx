@@ -1,7 +1,9 @@
-import React from 'react';
-import './Navbar.scss';
+import React, { useEffect, useState } from "react";
+import "./Navbar.scss";
+import SlidingWindow from "../sliding-window/SlidingWindow";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const scrollToSection = (id?: string) => {
     if (id) {
       document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -9,16 +11,41 @@ const Navbar = () => {
       window.scrollTo({ top: 0, behavior: "smooth" }); // Scroll to the top
     }
   };
+  useEffect(() => {
+    const handleScroll = () => {
+      if (isOpen) {
+        setIsOpen(false); // Close the slider on scroll
+      }
+    };
+
+    // Add scroll event listener to the window
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isOpen]);
 
   return (
-    <nav className="navbar">
-      <ul>
-      <li onClick={() => scrollToSection()}>Home</li> 
-        <li onClick={() => scrollToSection('about')}>About</li>
-        <li onClick={() => scrollToSection('work')}>Work</li>
-        <li onClick={() => scrollToSection('contact')}>Contact</li>
-      </ul>
-    </nav>
+    <>
+      <SlidingWindow
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+        width={"60%"}
+        heading="Dhruv Vashishth"
+      >
+        <div>lets get to know me</div>
+      </SlidingWindow>
+      <nav className="navbar">
+        <ul>
+          <li onClick={() => scrollToSection()}>Home</li>
+          <li onClick={() => setIsOpen((prev) => !prev)}>About</li>
+          <li onClick={() => scrollToSection("work")}>Work</li>
+          <li onClick={() => scrollToSection("contact")}>Contact</li>
+        </ul>
+      </nav>
+    </>
   );
 };
 
