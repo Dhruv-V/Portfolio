@@ -3,7 +3,7 @@
   width: 100%;
   top: 0;
   display: flex;
-  height: calc(100vh - 60px); // Adjust for navbar height
+  height: calc(100vh - 60px);
   padding-top: 60px;
   // background-image: url(./../../assets/images/bgNetwork.png);
   background: white;
@@ -34,7 +34,7 @@
 
     h2 {
       font-weight: 400;
-      color: black; // Lighter text color for better readability
+      color: black;
       font-family: "Raleway", sans-serif;
     }
   }

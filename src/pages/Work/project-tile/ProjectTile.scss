@@ -8,11 +8,11 @@
   background: #000000;
 
   &.content-left {
-    flex-direction: row; // Content left, images right
+    flex-direction: row;
   }
 
   &.content-right {
-    flex-direction: row-reverse; // Content right, images left
+    flex-direction: row-reverse;
   }
 
   .project-content {
@@ -74,7 +74,6 @@
 
     img {
       width: 100%;
-      //   max-width: 300px;
       border-radius: 1rem;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       height: 40vh;

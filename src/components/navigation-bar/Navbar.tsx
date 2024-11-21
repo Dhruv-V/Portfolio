@@ -11,7 +11,7 @@ const Navbar = () => {
     if (id) {
       document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
     } else {
-      window.scrollTo({ top: 0, behavior: "smooth" }); // Scroll to the top
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
 

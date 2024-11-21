@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   color: black;
-  padding: 40px 20px;
+  padding: 2rem;
   font-family: "raleway";
   overflow-y: scroll;
   flex-grow: 1;
@@ -17,7 +17,6 @@
     width: 100%;
     display: flex;
     justify-content: space-around;
-    // margin-bottom: 30px;
     flex-direction: row;
     align-items: center;
     gap: 2rem;
@@ -25,7 +24,6 @@
     .about-image {
       width: 60rem;
       height: 10rem;
-      // border-radius: 50%;
       border: 1px solid black;
       object-fit: cover;
     }
@@ -87,7 +85,7 @@
       margin: 0 15px;
       font-size: 16px;
       padding: 0.1rem 1rem;
-      transition: all 0.3s;
+      transition: all ease-in-out 0.3s;
       font-family: "raleway";
 
       &:hover {

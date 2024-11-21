@@ -1,15 +1,12 @@
 import React from "react";
 import "./About.scss";
+import profileImage from "../../assets/images/dkv.jpg";
 
 const About = () => {
   return (
     <div className="about-container">
       <div className="about-header">
-        <img
-          src="path-to-your-image.jpg" // Replace with your image path
-          alt="Dhruv Vashishth"
-          className="about-image"
-        />
+        <img src={profileImage} alt="Dhruv Vashishth" className="about-image" />
         <div className="about-intro-container">
           <h1>Dhruv Vashishth</h1>
           <p className="about-intro">
@@ -74,28 +71,12 @@ const About = () => {
         </div>
 
         <div className="about-links">
-          <a
-            href="your-resume-link.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Resume
-          </a>
-          <a
-            href="https://linkedin.com/in/dhruvvashishth"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://dhruv-v.github.io/dhruv-resume/resume.pdf">Resume</a>
+          <a href="https://www.linkedin.com/in/dhruv-vashishth-274694206/">
             LinkedIn
           </a>
-          <a
-            href="https://github.com/dhruvvashishth"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub
-          </a>
-          <a href="mailto:dhruvvashishth009@gmail.com">Email</a>
+          <a href="https://github.com/Dhruv-V">GitHub</a>
+          <a href="mailto:magmers9@gmail.com">magmers9@gmail.com</a>
         </div>
       </div>
     </div>

@@ -20,9 +20,6 @@ const Projects = () => {
         {projects.map((project, index) => (
           <li key={index} className="project-tile">
             <div
-              //   href={project.link}
-              //   target="_blank"
-              //   rel="noopener noreferrer"
               onClick={() => scrollToSection(project.id)}
               className="project-link"
             >

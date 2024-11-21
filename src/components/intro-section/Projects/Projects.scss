@@ -21,18 +21,14 @@
     margin: 0;
 
     .project-tile {
-      //   margin: 1rem;
       padding: 1rem;
       border-bottom: 1px solid transparent;
-      //   border-radius: 10px;
-      //   background: linear-gradient(90deg, #2c2c2c, #3a3a3a);
 
       transition: all 0.3s ease-in-out;
       position: relative;
       overflow: hidden;
       &:hover {
         border-color: black;
-        // background: linear-gradient(90deg, #3a3a3a, #2c2c2c);
         transform: translateX(5px);
 
         .arrow {
@@ -79,7 +75,6 @@
       left: 0;
       width: 0;
       height: 0;
-      //   background: #000;
       transition: width 0.5s ease-in-out;
     }
     .project-tile::after:hover {
