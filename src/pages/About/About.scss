@@ -22,49 +22,49 @@
     gap: 2rem;
 
     .about-image {
-      width: 60rem;
-      height: 10rem;
+      width: 18rem; /* Adjusted for smaller screens */
+      height: 18rem;
       border: 1px solid black;
       object-fit: cover;
+      border-radius: 50%; /* Ensures a circular image */
     }
   }
 
   .about-content {
     max-width: 800px;
     text-align: left;
+    padding: 1rem;
 
     h1 {
-      font-size: 36px;
-      margin-bottom: 10px;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      text-align: center; /* Center-align the heading */
     }
 
     .about-intro {
-      font-size: 18px;
+      font-size: 1rem;
       color: black;
-      margin-bottom: 20px;
-      font-family: "raleway";
-      flex-grow: 1;
+      margin-bottom: 1.5rem;
+      text-align: center; /* Center-align the introduction text */
     }
 
     .about-section {
-      margin-bottom: 30px;
+      margin-bottom: 2rem;
 
       h2 {
-        font-size: 24px;
+        font-size: 1.5rem;
         color: black;
-        margin-bottom: 10px;
-        font-family: "raleway";
+        margin-bottom: 0.5rem;
       }
 
       p,
       ul {
-        font-size: 16px;
+        font-size: 1rem;
         color: black;
-        margin: 0;
         line-height: 1.6;
 
         ul {
-          padding-left: 20px;
+          padding-left: 1.25rem;
         }
 
         li {
@@ -75,23 +75,94 @@
   }
 
   .about-links {
-    margin-top: 30px;
+    margin-top: 2rem;
     display: flex;
+    flex-wrap: wrap; /* Ensures links wrap on smaller screens */
     justify-content: center;
 
     a {
       color: black;
       text-decoration: none;
-      margin: 0 15px;
-      font-size: 16px;
+      margin: 0.5rem;
+      font-size: 1rem;
       padding: 0.1rem 1rem;
       transition: all ease-in-out 0.3s;
-      font-family: "raleway";
 
       &:hover {
         color: black;
         border-bottom: 1px solid black;
       }
+    }
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .about-header {
+      flex-direction: column; /* Stack the image and intro vertically */
+      gap: 1rem;
+
+      .about-image {
+        width: 15rem; /* Adjusted size for medium screens */
+        height: 15rem;
+      }
+    }
+
+    .about-content {
+      padding: 0.5rem;
+
+      h1 {
+        font-size: 2rem; /* Smaller font size for headings */
+      }
+
+      .about-intro {
+        font-size: 0.9rem;
+      }
+
+      .about-section h2 {
+        font-size: 1.25rem;
+      }
+
+      .about-section p,
+      .about-section ul {
+        font-size: 0.9rem;
+      }
+    }
+
+    .about-links a {
+      font-size: 0.9rem;
+      margin: 0.25rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .about-header {
+      .about-image {
+        width: 10rem; /* Smaller size for mobile screens */
+        height: 10rem;
+      }
+    }
+
+    .about-content {
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      .about-intro {
+        font-size: 0.8rem;
+      }
+
+      .about-section h2 {
+        font-size: 1rem;
+      }
+
+      .about-section p,
+      .about-section ul {
+        font-size: 0.8rem;
+      }
+    }
+
+    .about-links a {
+      font-size: 0.8rem;
     }
   }
 }
