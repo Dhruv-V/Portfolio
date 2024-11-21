@@ -1,19 +1,23 @@
 .navbar {
   position: fixed;
-  top: 0;
-  right: 1rem;
-  width: 40%;
+  top: 1.2rem;
+  right: 4rem;
   background-color: transparent;
-  color: white;
+  color: black;
   z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
-  // padding: 10px 0;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 1rem;
+  padding: 0.1rem;
+  backdrop-filter: blur(1px);
 
   ul {
+    padding: 0;
+    margin: 0;
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     list-style: none;
   }
 
@@ -23,10 +27,31 @@
     font-weight: 400;
     padding: 0.4rem 0.8rem;
     &:hover {
-      background: white;
-      color: black;
+      background: black;
+      color: white;
       border-radius: 1rem;
-      transition: background 1s;
+      transition: background 0.3s;
     }
   }
+}
+.initial-img {
+  width: 2rem;
+  height: 2rem;
+  z-index: 1;
+}
+.initial-name {
+  z-index: 1;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.initial-container {
+  position: fixed;
+  top: 1rem;
+  left: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  z-index: 1;
+  gap: 0.5rem;
 }

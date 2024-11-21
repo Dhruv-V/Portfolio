@@ -1,9 +1,6 @@
 .projects {
   padding: 2rem;
   padding-left: 2rem;
-  background: #1e1e1e; // Dark background
-  border-top-left-radius: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,7 +10,7 @@
     justify-content: space-between;
   }
   h2 {
-    color: #f5f5f5;
+    color: black;
     font-family: "Raleway", sans-serif;
     font-size: 1rem;
   }
@@ -24,18 +21,18 @@
     margin: 0;
 
     .project-tile {
-      margin: 20px 0;
-      padding: 20px;
-      border-bottom: 2px solid transparent;
-      border-radius: 10px;
-      background: linear-gradient(90deg, #2c2c2c, #3a3a3a);
+      //   margin: 1rem;
+      padding: 1rem;
+      border-bottom: 1px solid transparent;
+      //   border-radius: 10px;
+      //   background: linear-gradient(90deg, #2c2c2c, #3a3a3a);
 
       transition: all 0.3s ease-in-out;
       position: relative;
       overflow: hidden;
       &:hover {
-        border-color: #007bff;
-        background: linear-gradient(90deg, #3a3a3a, #2c2c2c);
+        border-color: black;
+        // background: linear-gradient(90deg, #3a3a3a, #2c2c2c);
         transform: translateX(5px);
 
         .arrow {
@@ -48,14 +45,14 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        color: #ffffff;
+        color: black;
         font-size: 1rem;
         /* font-weight: bold; */
         text-decoration: none;
         position: relative;
 
         &:hover {
-          color: #007bff;
+          color: black;
           text-decoration: none;
         }
 
@@ -69,7 +66,7 @@
       }
 
       .project-description {
-        color: #cccccc;
+        color: black;
         font-size: 1rem;
         margin-top: 10px;
         font-family: "Raleway", sans-serif;
@@ -82,7 +79,7 @@
       left: 0;
       width: 0;
       height: 0;
-      background: #000;
+      //   background: #000;
       transition: width 0.5s ease-in-out;
     }
     .project-tile::after:hover {

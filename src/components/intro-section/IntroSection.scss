@@ -5,7 +5,8 @@
   display: flex;
   height: calc(100vh - 60px); // Adjust for navbar height
   padding-top: 60px;
-  background-image: url(./../../assets/images/bgNetwork.png);
+  // background-image: url(./../../assets/images/bgNetwork.png);
+  background: white;
 
   .intro {
     width: 60%;
@@ -16,48 +17,24 @@
     flex-direction: column;
 
     h1 {
-      font-size: 4rem;
+      font-size: 5rem;
+      color: black;
+      margin: 0;
     }
 
     p {
-      font-size: 1rem;
+      font-size: 2rem;
+      color: black;
     }
   }
 
   .projects {
     width: 40%;
     padding: 40px;
-    background: linear-gradient(
-      to bottom right,
-      #282828,
-      #3c3c3c
-    ); // Subtle gradient for elegance
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6),
-      0 2px 6px rgba(255, 255, 255, 0.1); // Soft shadow
-    color: white;
-    border-top-left-radius: 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.1); // Slight border for structure
-
-    ul {
-      list-style: none;
-
-      li {
-        margin: 10px 0;
-
-        a {
-          color: #4dabff; // Bright blue for better readability
-          text-decoration: none;
-
-          &:hover {
-            text-decoration: underline;
-          }
-        }
-      }
-    }
 
     h2 {
       font-weight: 400;
-      color: #f5f5f5; // Lighter text color for better readability
+      color: black; // Lighter text color for better readability
       font-family: "Raleway", sans-serif;
     }
   }

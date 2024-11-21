@@ -44,7 +44,7 @@ const ProjectTile = ({ project, index, totalProjects }: any) => {
       {/* Project Images */}
       <div className="project-images">
         {project.images.map((image: any, idx: any) => (
-          <img key={idx} src={image} alt={`Project ${project.id} ${idx}`} />
+          <img key={idx} src={image} alt={`Project Image`} />
         ))}
       </div>
     </div>

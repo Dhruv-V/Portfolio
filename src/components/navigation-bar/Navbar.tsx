@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./Navbar.scss";
 import SlidingWindow from "../sliding-window/SlidingWindow";
+import { url } from "inspector";
+import initial from "../../assets/images/initial.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,6 +39,10 @@ const Navbar = () => {
       >
         <div>lets get to know me</div>
       </SlidingWindow>
+      <div className="initial-container">
+        <img className="initial-img" src={initial} alt="dkv" />
+        <div className="initial-name">DKV.</div>
+      </div>
       <nav className="navbar">
         <ul>
           <li onClick={() => scrollToSection()}>Home</li>

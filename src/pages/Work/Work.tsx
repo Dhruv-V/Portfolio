@@ -3,7 +3,7 @@ import ProjectTile from "./project-tile/ProjectTile";
 
 const Work = () => {
   return (
-    <div className="work-page">
+    <div id="work" className="work-page">
       {projects.map((project, index) => (
         <ProjectTile
           key={project.id}
