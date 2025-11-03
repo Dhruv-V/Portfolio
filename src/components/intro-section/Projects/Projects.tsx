@@ -13,7 +13,7 @@ const Projects = () => {
   return (
     <div className="projects">
       <div className="project-header">
-        <h2>SELECTED PROJECTS</h2>
+        <h2>SELECTED PROJECTS.</h2>
         <GrProjects />
       </div>
       <ul>
