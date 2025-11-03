@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "./LandingPage.scss";
 
 const LandingPage: React.FC<{ onAnimationEnd: () => void }> = ({

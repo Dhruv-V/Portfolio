@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Navbar.scss";
 import SlidingWindow from "../sliding-window/SlidingWindow";
-import { url } from "inspector";
 import initial from "../../assets/images/initial.png";
 import About from "../../pages/About/About";
 

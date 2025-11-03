@@ -1,10 +1,68 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.app {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+}
+
 .scrollable-content {
   position: relative;
   z-index: 10;
   background-color: rgba(0, 0, 0, 0.9);
   color: white;
+  width: 100%;
+  overflow-x: hidden;
 }
 
-html {
-  scroll-behavior: smooth;
+/* Touch-friendly elements */
+button, a {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* Focus visible for accessibility */
+*:focus-visible {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .scrollable-content {
+    padding: 0;
+  }
+
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
 }

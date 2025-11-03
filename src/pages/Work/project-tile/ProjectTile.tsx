@@ -1,4 +1,5 @@
 import React from "react";
+import ProjectImage from "../../../components/ProjectImage/ProjectImage";
 import "./ProjectTile.scss";
 
 const ProjectTile = ({ project, index, totalProjects }: any) => {
@@ -43,9 +44,7 @@ const ProjectTile = ({ project, index, totalProjects }: any) => {
 
       {/* Project Images */}
       <div className="project-images">
-        {project.images.map((image: any, idx: any) => (
-          <img key={idx} src={image} alt={`Project Image`} />
-        ))}
+        <ProjectImage projectId={project.id} title={project.title} />
       </div>
     </div>
   );
