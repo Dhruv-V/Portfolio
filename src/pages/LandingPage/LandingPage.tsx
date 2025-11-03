@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import './LandingPage.scss';
+import React, { useEffect, useState } from "react";
+import "./LandingPage.scss";
 
-const LandingPage: React.FC<{ onAnimationEnd: () => void }> = ({ onAnimationEnd }) => {
-
+const LandingPage: React.FC<{ onAnimationEnd: () => void }> = ({
+  onAnimationEnd,
+}) => {
   useEffect(() => {
     const cleanup = setTimeout(onAnimationEnd, 4000);
     return () => {
@@ -12,10 +13,8 @@ const LandingPage: React.FC<{ onAnimationEnd: () => void }> = ({ onAnimationEnd 
 
   return (
     <div className={`landing-page fade-out`}>
-      <p className = 'heading'>Welcome to Dhruv's Portfolio.</p>
-    <div className="footer">
-        Let's Get Started
-    </div>
+      <p className="heading">Welcome to Dhruv's Portfolio.</p>
+      <div className="footer-landing-page">Let's Get Started</div>
     </div>
   );
 };

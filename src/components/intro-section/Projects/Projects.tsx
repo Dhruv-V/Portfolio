@@ -13,22 +13,21 @@ const Projects = () => {
   return (
     <div className="projects">
       <div className="project-header">
-        <h2>SELECTED PROJECTS</h2>
+        <h2>SELECTED PROJECTS.</h2>
         <GrProjects />
       </div>
       <ul>
         {projects.map((project, index) => (
           <li key={index} className="project-tile">
             <div
-              //   href={project.link}
-              //   target="_blank"
-              //   rel="noopener noreferrer"
               onClick={() => scrollToSection(project.id)}
               className="project-link"
             >
               {project.title}
               {/* <span className="arrow"> */}
-              <FaArrowRight />
+              <div>
+                <FaArrowRight />
+              </div>
               {/* </span> */}
             </div>
             {/* <p className="project-description">{project.description}</p> */}

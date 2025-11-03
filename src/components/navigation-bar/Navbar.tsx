@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./Navbar.scss";
 import SlidingWindow from "../sliding-window/SlidingWindow";
+import { url } from "inspector";
+import initial from "../../assets/images/initial.png";
+import About from "../../pages/About/About";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,24 +11,9 @@ const Navbar = () => {
     if (id) {
       document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
     } else {
-      window.scrollTo({ top: 0, behavior: "smooth" }); // Scroll to the top
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
-  useEffect(() => {
-    const handleScroll = () => {
-      if (isOpen) {
-        setIsOpen(false); // Close the slider on scroll
-      }
-    };
-
-    // Add scroll event listener to the window
-    window.addEventListener("scroll", handleScroll);
-
-    // Cleanup the event listener on component unmount
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [isOpen]);
 
   return (
     <>
@@ -33,10 +21,14 @@ const Navbar = () => {
         isOpen={isOpen}
         setIsOpen={setIsOpen}
         width={"60%"}
-        heading="Dhruv Vashishth"
+        heading="About Me"
       >
-        <div>lets get to know me</div>
+        <About />
       </SlidingWindow>
+      <div className="initial-container">
+        <img className="initial-img" src={initial} alt="dkv" />
+        <div className="initial-name">DKV.</div>
+      </div>
       <nav className="navbar">
         <ul>
           <li onClick={() => scrollToSection()}>Home</li>
