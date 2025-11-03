@@ -25,7 +25,9 @@ const Projects = () => {
             >
               {project.title}
               {/* <span className="arrow"> */}
-              <FaArrowRight />
+              <div>
+                <FaArrowRight />
+              </div>
               {/* </span> */}
             </div>
             {/* <p className="project-description">{project.description}</p> */}

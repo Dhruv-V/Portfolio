@@ -1,46 +1,121 @@
-# Getting Started with Create React App
+# 🚀 Dhruv Vashishth - Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Deploy Portfolio](https://github.com/Dhruv-V/Portfolio/actions/workflows/deploy.yml/badge.svg)](https://github.com/Dhruv-V/Portfolio/actions/workflows/deploy.yml)
+[![Live Site](https://img.shields.io/badge/Live-Portfolio-blue)](https://dhruv-v.github.io/Portfolio)
 
-## Available Scripts
+> Personal portfolio website showcasing my work as a Frontend Developer
 
-In the project directory, you can run:
+## 🌐 Live Demo
 
-### `npm start`
+- **GitHub Pages:** [https://dhruv-v.github.io/Portfolio](https://dhruv-v.github.io/Portfolio)
+- **Vercel:** (Coming soon - deploy with `vercel --prod`)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 🛠️ Built With
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **React** 18.3.1
+- **TypeScript** 4.9.5
+- **SCSS/Sass** 1.81.0
+- **React Icons** 5.3.0
 
-### `npm test`
+## ⚡ Quick Start
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Install Dependencies
+```bash
+pnpm install
+```
 
-### `npm run build`
+### Development Server
+```bash
+pnpm start
+```
+Opens on [http://localhost:3000](http://localhost:3000)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Build for Production
+```bash
+pnpm run build
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Deploy
+```bash
+# Option 1: Automatic (push to main)
+git push origin main
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Option 2: Manual with gh-pages
+pnpm run deploy
 
-### `npm run eject`
+# Option 3: Vercel
+vercel --prod
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 📦 Project Structure
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+Portfolio/
+├── public/              # Static assets
+├── src/
+│   ├── components/      # Reusable components
+│   ├── pages/          # Page components
+│   ├── assets/         # Images, fonts
+│   └── App.tsx         # Main app component
+├── .github/
+│   └── workflows/      # GitHub Actions CI/CD
+└── package.json
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 🚀 Deployment
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Quick Deploy
+```bash
+pnpm run deploy
+```
+Your site will be live at: `https://dhruv-v.github.io/Portfolio`
 
-## Learn More
+### Automatic Deployment
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Every push to `main` branch automatically deploys using `gh-pages`:
+1. ✅ Builds the project
+2. ✅ Deploys to GitHub Pages
+3. ✅ Site is live in 2-3 minutes
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Check deployment status:** [Actions Tab](https://github.com/Dhruv-V/Portfolio/actions)
+
+### Full Guide
+
+See **[DEPLOY_WITH_GHPAGES.md](./DEPLOY_WITH_GHPAGES.md)** for:
+- First-time setup
+- Troubleshooting
+- Deployment tips
+
+## 📝 Available Scripts
+
+| Command | Description |
+|---------|-------------|
+| `pnpm start` | Start development server |
+| `pnpm run build` | Build for production |
+| `pnpm test` | Run tests |
+| `pnpm run deploy` | Deploy to gh-pages |
+
+## 🎨 Features
+
+- ✨ Modern, responsive design
+- 🎯 TypeScript for type safety
+- 🎨 SCSS for advanced styling
+- 📱 Mobile-first approach
+- ⚡ Fast performance
+- 🔄 Automatic deployments
+- 🌐 SEO optimized
+
+## 📞 Contact
+
+- **Email:** magmers9@gmail.com
+- **Phone:** +91-7827167251
+- **LinkedIn:** [Dhruv Vashishth](https://www.linkedin.com/in/dhruv-vashishth-274694206/)
+- **GitHub:** [Dhruv-V](https://github.com/Dhruv-V)
+
+## 📄 License
+
+This project is open source and available under the MIT License.
+
+---
+
+**Built with ❤️ by Dhruv Vashishth**

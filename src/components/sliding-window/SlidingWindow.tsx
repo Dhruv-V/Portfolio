@@ -13,7 +13,7 @@ const SlidingWindow = ({
   setIsOpen: (e: boolean) => void;
   width?: any;
   heading?: string;
-  children: JSX.Element;
+  children: any;
 }) => {
   const toggleWindow = () => {
     setIsOpen(!isOpen);
