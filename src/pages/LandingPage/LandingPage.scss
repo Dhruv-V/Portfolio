@@ -55,8 +55,52 @@
   pointer-events: none;
 }
 
-.footer-landing-page {
+.footer {
   position: absolute;
   bottom: 1rem;
   font-size: 0.8rem;
+  text-align: center;
+  width: 100%;
+  padding: 0 1rem;
+
+  p {
+    margin: 0;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 1.8rem !important;
+    text-align: center;
+    padding: 0 1.5rem;
+  }
+
+  .footer {
+    font-size: 0.7rem;
+    bottom: 0.5rem;
+
+    p {
+      font-size: 0.7rem;
+    }
+  }
+}
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .heading {
+    font-size: 2.5rem;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .heading {
+    font-size: 1.5rem !important;
+    padding: 0 1rem;
+  }
+
+  .footer {
+    font-size: 0.65rem;
+  }
 }

@@ -55,3 +55,51 @@
   z-index: 1;
   gap: 0.5rem;
 }
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    top: 1rem;
+    right: 1rem;
+    padding: 0.2rem;
+
+    ul {
+      gap: 0.3rem;
+    }
+
+    li {
+      font-size: 0.75rem;
+      padding: 0.3rem 0.5rem;
+
+      button {
+        font-size: inherit;
+      }
+    }
+  }
+
+  .initial-container {
+    top: 1rem;
+    left: 1rem;
+
+    .initial-img {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    .initial-name {
+      font-size: 1rem;
+    }
+  }
+}
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .navbar {
+    right: 2rem;
+
+    li {
+      font-size: 0.9rem;
+      padding: 0.35rem 0.7rem;
+    }
+  }
+}

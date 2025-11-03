@@ -1,168 +1,408 @@
-.about-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: black;
-  padding: 2rem;
-  font-family: "raleway";
-  overflow-y: scroll;
-  flex-grow: 1;
+.about-page {
+  padding: 2rem 1.5rem;
+  max-height: 80vh;
+  overflow-y: auto;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
 
-  .about-intro-container {
-    display: flex;
-    flex-direction: column;
+  /* Custom Scrollbar */
+  &::-webkit-scrollbar {
+    width: 8px;
   }
 
-  .about-header {
-    width: 100%;
+  &::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  section {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #fff;
+      font-weight: 700;
+    }
+
+    h3 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      color: #a8b4ff;
+      font-weight: 600;
+    }
+
+    h4 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    h5 {
+      font-size: 1rem;
+      margin-bottom: 0.3rem;
+      color: #c7d0ff;
+      font-weight: 500;
+    }
+  }
+
+  /* Profile Section */
+  .about-profile {
     display: flex;
-    justify-content: space-around;
-    flex-direction: row;
     align-items: center;
     gap: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid rgba(102, 126, 234, 0.3);
+    margin-bottom: 2rem;
 
-    .about-image {
-      width: 18rem; /* Adjusted for smaller screens */
-      height: 18rem;
-      border: 1px solid black;
-      object-fit: cover;
-      border-radius: 50%; /* Ensures a circular image */
-    }
-  }
+    .profile-image-container {
+      flex-shrink: 0;
 
-  .about-content {
-    max-width: 800px;
-    text-align: left;
-    padding: 1rem;
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      text-align: center; /* Center-align the heading */
+      .profile-image {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 3px solid #667eea;
+        object-fit: cover;
+        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+      }
     }
 
-    .about-intro {
-      font-size: 1rem;
-      color: black;
-      margin-bottom: 1.5rem;
-      text-align: center; /* Center-align the introduction text */
-    }
-
-    .about-section {
-      margin-bottom: 2rem;
-
+    .profile-info {
       h2 {
-        font-size: 1.5rem;
-        color: black;
         margin-bottom: 0.5rem;
+        font-size: 2rem;
+        background: linear-gradient(135deg, #667eea, #a8b4ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
       }
 
-      p,
-      ul {
-        font-size: 1rem;
-        color: black;
-        line-height: 1.6;
+      .profile-title {
+        font-size: 1.1rem;
+        color: #a8b4ff;
+        margin-bottom: 0.3rem;
+        font-weight: 500;
+      }
 
-        ul {
-          padding-left: 1.25rem;
-        }
-
-        li {
-          list-style: disc;
-        }
+      .profile-location {
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.7);
       }
     }
   }
 
-  .about-links {
-    margin-top: 2rem;
-    display: flex;
-    flex-wrap: wrap; /* Ensures links wrap on smaller screens */
-    justify-content: center;
-
-    a {
-      color: black;
-      text-decoration: none;
-      margin: 0.5rem;
+  /* Bio Section */
+  .about-bio {
+    .bio-text {
+      line-height: 1.8;
+      color: #fff;
       font-size: 1rem;
-      padding: 0.1rem 1rem;
-      transition: all ease-in-out 0.3s;
-
-      &:hover {
-        color: black;
-        border-bottom: 1px solid black;
-      }
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
     }
   }
 
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .about-header {
-      flex-direction: column; /* Stack the image and intro vertically */
+  /* Skills Section */
+  .about-skills {
+    .skill-group {
+      margin-bottom: 1.5rem;
+
+      h4 {
+        font-size: 1rem;
+        margin-bottom: 0.8rem;
+        color: #fff;
+        font-weight: 600;
+      }
+    }
+
+    .skills-grid {
+      display: grid;
       gap: 1rem;
 
-      .about-image {
-        width: 15rem; /* Adjusted size for medium screens */
-        height: 15rem;
+      .skill-item {
+        .skill-name {
+          display: block;
+          font-size: 0.9rem;
+          margin-bottom: 0.4rem;
+          color: #fff;
+          font-weight: 500;
+        }
+
+        .skill-bar {
+          width: 100%;
+          height: 8px;
+          background: rgba(255, 255, 255, 0.15);
+          border-radius: 4px;
+          overflow: hidden;
+          margin-bottom: 0.3rem;
+
+          .skill-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 4px;
+            transition: width 0.3s ease;
+          }
+        }
+
+        .skill-percent {
+          font-size: 0.8rem;
+          color: #a8b4ff;
+          font-weight: 500;
+        }
       }
     }
 
-    .about-content {
-      padding: 0.5rem;
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
 
-      h1 {
-        font-size: 2rem; /* Smaller font size for headings */
+      .skill-tag {
+        padding: 0.5rem 1rem;
+        background: rgba(102, 126, 234, 0.25);
+        border: 1px solid rgba(102, 126, 234, 0.4);
+        border-radius: 6px;
+        font-size: 0.85rem;
+        color: #fff;
+        font-weight: 500;
+        transition: all 0.2s ease;
+
+        &:hover {
+          background: rgba(102, 126, 234, 0.4);
+          border-color: rgba(102, 126, 234, 0.6);
+          transform: translateY(-2px);
+        }
       }
-
-      .about-intro {
-        font-size: 0.9rem;
-      }
-
-      .about-section h2 {
-        font-size: 1.25rem;
-      }
-
-      .about-section p,
-      .about-section ul {
-        font-size: 0.9rem;
-      }
-    }
-
-    .about-links a {
-      font-size: 0.9rem;
-      margin: 0.25rem;
     }
   }
 
-  @media (max-width: 480px) {
-    .about-header {
-      .about-image {
-        width: 10rem; /* Smaller size for mobile screens */
-        height: 10rem;
+  /* Experience Section */
+  .about-experience {
+    .experience-item {
+      margin-bottom: 2rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .exp-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 0.3rem;
+        flex-wrap: wrap;
+
+        .exp-period {
+          font-size: 0.85rem;
+          color: #a8b4ff;
+          font-weight: 500;
+        }
+      }
+
+      .exp-company {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+      }
+
+      .project-detail {
+        margin-bottom: 1.5rem;
+        padding-left: 1rem;
+        border-left: 3px solid rgba(102, 126, 234, 0.4);
+
+        h5 {
+          margin-top: 0.5rem;
+        }
+
+        .project-period {
+          font-size: 0.8rem;
+          color: #a8b4ff;
+          display: block;
+          margin-bottom: 0.5rem;
+          font-weight: 500;
+        }
+
+        .project-stack {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+          margin-bottom: 0.8rem;
+
+          .tech-badge {
+            padding: 0.3rem 0.7rem;
+            background: rgba(102, 126, 234, 0.25);
+            border: 1px solid rgba(102, 126, 234, 0.4);
+            border-radius: 4px;
+            font-size: 0.75rem;
+            color: #fff;
+            font-weight: 500;
+          }
+        }
+
+        .achievements-list {
+          margin: 0;
+          padding-left: 1.2rem;
+
+          li {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            color: #fff;
+            margin-bottom: 0.6rem;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
       }
     }
+  }
 
-    .about-content {
-      h1 {
-        font-size: 1.8rem;
-      }
-
-      .about-intro {
-        font-size: 0.8rem;
-      }
-
-      .about-section h2 {
+  /* Education Section */
+  .about-education {
+    .education-item {
+      .institution {
+        color: #fff;
+        margin-bottom: 0.4rem;
         font-size: 1rem;
       }
 
-      .about-section p,
-      .about-section ul {
-        font-size: 0.8rem;
+      .location,
+      .period {
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 0.3rem;
+      }
+    }
+  }
+
+  /* Achievements Section */
+  .about-achievements {
+    .achievements-grid {
+      display: grid;
+      gap: 1rem;
+
+      .achievement-card {
+        padding: 1.2rem;
+        background: rgba(102, 126, 234, 0.2);
+        border: 1px solid rgba(102, 126, 234, 0.4);
+        border-radius: 8px;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background: rgba(102, 126, 234, 0.3);
+          border-color: rgba(102, 126, 234, 0.5);
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+
+        .achievement-icon {
+          font-size: 2.5rem;
+          display: block;
+          margin-bottom: 0.5rem;
+        }
+
+        h4 {
+          font-size: 1.05rem;
+          margin-bottom: 0.4rem;
+          color: #fff;
+        }
+
+        p {
+          font-size: 0.9rem;
+          color: rgba(255, 255, 255, 0.9);
+        }
+      }
+    }
+  }
+
+  /* Contact Links */
+  .about-contact {
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+
+      .contact-link {
+        padding: 0.7rem 1.4rem;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: #fff;
+        text-decoration: none;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(102, 126, 234, 0.2);
+
+        &:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 6px 16px rgba(102, 126, 234, 0.5);
+        }
+      }
+    }
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    padding: 1.5rem 1rem;
+
+    .about-profile {
+      flex-direction: column;
+      text-align: center;
+
+      .profile-image-container .profile-image {
+        width: 100px;
+        height: 100px;
+      }
+
+      .profile-info h2 {
+        font-size: 1.6rem;
       }
     }
 
-    .about-links a {
-      font-size: 0.8rem;
+    section {
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      h3 {
+        font-size: 1.2rem;
+      }
+    }
+
+    .about-experience {
+      .experience-item {
+        .exp-header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .project-detail {
+          padding-left: 0.8rem;
+        }
+      }
+    }
+
+    .about-contact .contact-links {
+      justify-content: center;
     }
   }
 }

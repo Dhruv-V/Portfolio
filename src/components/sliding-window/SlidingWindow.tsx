@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import "./SlidingWindow.scss";
-import { IoIosCloseCircle } from "react-icons/io";
 
 const SlidingWindow = ({
   isOpen,
@@ -15,10 +14,6 @@ const SlidingWindow = ({
   heading?: string;
   children: any;
 }) => {
-  const toggleWindow = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
     <div className="sliding-container">
       <div

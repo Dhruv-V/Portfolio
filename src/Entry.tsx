@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import Router from './pages/Router/Router';
-import LandingPage from './pages/LandingPage/LandingPage';
-import App from './App';
+import React, { useState } from "react";
+import LandingPage from "./pages/LandingPage/LandingPage";
+import App from "./App";
 
 const Entry = () => {
   const [showLandingPage, setShowLandingPage] = useState(true);
@@ -12,10 +11,8 @@ const Entry = () => {
 
   return (
     <>
-      {showLandingPage &&
-        <LandingPage onAnimationEnd={handleLandingPageEnd} />}
-        <App />
-      
+      {showLandingPage && <LandingPage onAnimationEnd={handleLandingPageEnd} />}
+      <App />
     </>
   );
 };
