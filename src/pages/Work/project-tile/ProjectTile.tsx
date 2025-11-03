@@ -15,7 +15,7 @@ const ProjectTile = ({ project, index, totalProjects }: any) => {
       <div id={project.id} className="project-content">
         <h2>{`Project ${index + 1}/${totalProjects}`}</h2>
         <h1>{project.title}</h1>
-        <div className="links">
+        {/* <div className="links">
           <a href={project.siteLink} target="_blank" rel="noopener noreferrer">
             Live Site
           </a>
@@ -26,7 +26,7 @@ const ProjectTile = ({ project, index, totalProjects }: any) => {
           >
             GitHub Repo
           </a>
-        </div>
+        </div> */}
         <p>{project.description}</p>
         <h3>Tech Stack</h3>
         <ul>
