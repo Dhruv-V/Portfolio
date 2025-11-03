@@ -40,6 +40,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
 
+      - name: Build project
+        run: pnpm run build
+        env:
+          CI: false
+
       - name: Configure git
         run: |
           git config --global user.name "github-actions[bot]"
@@ -51,4 +56,3 @@ jobs:
           npx gh-pages -d build -u "github-actions-bot <support+actions@github.com>"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CI: false
